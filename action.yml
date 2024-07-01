@@ -1,0 +1,16 @@
+name: 'Test Scanner POC'
+description: 'Example of reusable action'
+inputs:
+  sonar-host:
+    description: 'SonarQube host'
+    required: true
+  sonar-token:
+    description: 'SonarQube token'
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: echo "Scanner version V1"
+    - name: Run scanner bash
+      run: run-scanner.sh --workspace ${{ github.workspace }} --sonar-host ${{ inputs.sonar-host }} --sonar-token ${{ inputs.sonar-token }}
+      shell: bash
