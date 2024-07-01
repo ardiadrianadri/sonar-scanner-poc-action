@@ -11,6 +11,7 @@ runs:
   using: "composite"
   steps:
     - run: echo "Scanner version V1"
+      shell: bash
     - name: Run scanner bash
       run: run-scanner.sh --workspace ${{ github.workspace }} --sonar-host ${{ inputs.sonar-host }} --sonar-token ${{ inputs.sonar-token }}
       shell: bash
