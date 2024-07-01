@@ -16,5 +16,5 @@ runs:
       run: chmod +x ${{ github.action_path }}/run-scanner.sh
       shell: bash
     - name: Run scanner bash
-      run: ${{ github.action_path }}/run-scanner.sh --workspace ${{ github.workspace }} --sonar-host ${{ inputs.sonar-host }} --sonar-token ${{ inputs.sonar-token }}
+      run: ${{ github.action_path }}/run-scanner.sh --workspace ${{ github.workspace }} --host ${{ inputs.sonar-host }} --token ${{ inputs.sonar-token }}
       shell: bash
