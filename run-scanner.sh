@@ -14,7 +14,7 @@ echo "Running test"
 npm run test
 
 echo "Running scanner"
-While [[ $# -gt 0 ]]; do
+while [[ $# -gt 0 ]]; do
     case "$1" in
         --workspace)
             WORKSPACE=$2
